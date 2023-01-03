@@ -27,4 +27,26 @@ __meta__ = {
 "_edit_group_": true
 }
 
+[node name="floor2" type="StaticBody2D" parent="."]
+position = Vector2( 178, -218 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="floor2"]
+position = Vector2( 392, 369 )
+scale = Vector2( 8.67188, 1.23438 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor2"]
+position = Vector2( 392.5, 369.5 )
+shape = SubResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
+
 [node name="Monkey" parent="." instance=ExtResource( 2 )]
+position = Vector2( 134, 7 )
