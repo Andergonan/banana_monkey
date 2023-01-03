@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://icon.png" type="Texture" id=1]
+[ext_resource path="res://Monkey.tscn" type="PackedScene" id=2]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 276.5, 38.5 )
+
+[node name="Level_1" type="Node2D"]
+position = Vector2( 110, 56 )
+
+[node name="floor" type="StaticBody2D" parent="."]
+position = Vector2( -111, -55 )
+
+[node name="Sprite" type="Sprite" parent="floor"]
+position = Vector2( 392, 369 )
+scale = Vector2( 8.67188, 1.23438 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor"]
+position = Vector2( 392.5, 369.5 )
+shape = SubResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Monkey" parent="." instance=ExtResource( 2 )]
