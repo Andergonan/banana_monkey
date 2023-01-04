@@ -8,8 +8,12 @@ const jumpForce = -900
 func _physics_process(delta):
 	if Input.is_action_pressed("ui_right"):
 		velocity.x = playerSpeed
-	if Input.is_action_pressed("ui_left"):
+		$Sprite.play("walk")
+	elif Input.is_action_pressed("ui_left"):
 		velocity.x = -playerSpeed
+		$Sprite.play("walk_left")
+	else:
+		$Sprite.play("idle")
 		
 	velocity.y = velocity.y + gravity
 	
