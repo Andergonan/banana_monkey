@@ -27,19 +27,22 @@ animations = [ {
 } ]
 
 [sub_resource type="CapsuleShape2D" id=1]
-radius = 30.0
-height = 18.0
+radius = 5.0
+height = 6.0
 
 [node name="Monkey" type="KinematicBody2D"]
+position = Vector2( 28, 45 )
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="Sprite" type="AnimatedSprite" parent="."]
+position = Vector2( -28, -48 )
+scale = Vector2( 0.191667, 0.191667 )
 frames = SubResource( 2 )
 animation = "walk_left"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 1, 17 )
+position = Vector2( -28, -45 )
 shape = SubResource( 1 )
